@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>LibraryList</title>
+</head>
+<body>
+	<h1>LibraryList</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>図書名</th>
+				<th>ステータス</th>
+				<th>貸出日</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="b:${Libraryes}">
+				<td>[[${b.id}]]</td>
+				<td>[[${b.name}]]</td>
+				<td>[[${b.status}]]</td>
+				<td>[[${b.startDate}]]</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
